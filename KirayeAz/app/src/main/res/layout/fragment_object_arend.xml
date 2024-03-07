@@ -4,18 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Caategory.Category.ObjectSendBuy.ObjectScreens.ObjectArendFragment">
+    tools:context=".Category.Category.ObjectSendBuy.ObjectScreens.ObjectArendFragment">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rc"
@@ -34,21 +34,27 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Аренда Объектов"
-        android:textSize="20sp"
+        android:layout_marginTop="14dp"
+        android:text="@string/object_2"
+        android:textSize="24sp"
+        app:fontFamily="@font/manrope_semibold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView"
+    <ImageView
+        android:id="@+id/bBack"
         android:layout_width="40dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="4dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:src="@drawable/baseline_arrow_back_24"
+        android:backgroundTint="#D5D5D5"
+        android:clickable="true"
+        android:contextClickable="true"
+        android:focusable="true"
+        android:longClickable="true"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_24_" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,32 +3,55 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:theme="@style/YourCustomTheme"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Profile.TabViewPager.NewAds.NewAdsFragment">
-
+    tools:context=".Profile.NEW.NewAdsFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp">
+        android:layout_height="65dp"
+        android:background="@color/blue_bytf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:src="@drawable/baseline_horizontal_rule_24"
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/manrope_semibold"
+            android:gravity="center"
+            android:text="@string/new_ads"
+            android:textColor="@color/Student_Color"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666" />
+
+        <ImageView
+            android:id="@+id/bBack"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:focusable="true"
+            android:longClickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/baseline_arrow_back_26" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/imSetImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="7dp"
         android:background="@drawable/background"
         android:backgroundTint="#A5A5A5">
 
@@ -49,8 +72,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="@font/manrope_semibold"
-            android:text="Добавить Фото"
-            android:textColor="#000000"
+            android:text="@string/add_photo"
+            android:textColor="@color/blue_y"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/imageView17"
@@ -62,36 +85,51 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp">
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp">
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/im1"
             android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/im2"
+
             android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/im3"
+
             android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/im4"
             android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/im5"
+
             android:layout_width="80dp"
             android:layout_height="match_parent"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent" />
 
     </LinearLayout>
 
-    <androidx.core.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true">
@@ -136,6 +174,7 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     android:scrollbarStyle="outsideInset"
+                    app:boxStrokeColor="#00BCD4"
                     app:endIconScaleType="center"
                     app:hintTextAppearance="@style/TextInputLayoutHintStyle"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -146,7 +185,7 @@
                         android:id="@+id/editTitle"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
-                        android:hint="Заголовок*"
+                        android:hint="@string/new_head"
                         android:inputType="text|textCapWords" /> <!-- Используйте text|textMultiLine -->
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -159,6 +198,7 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#4CAF50"
                     app:hintTextAppearance="@style/TextInputLayoutHintStyle"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -168,18 +208,22 @@
                         android:id="@+id/editSquare"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
-                        android:hint="Плошадь,м²*"
-                        android:inputType="number|textCapWords" /> <!-- Используйте text|textMultiLine -->
+                        android:hint="@string/new_square"
+                        android:inputType="numberDecimal" />
+
+
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/Rooms"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="5dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#AC9A00"
                     app:hintTextAppearance="@style/TextInputLayoutHintStyle"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -189,8 +233,8 @@
                         android:id="@+id/editRoom"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
-                        android:hint="Количество Комнат*"
-                        android:inputType="number|textCapWords" /> <!-- Используйте text|textMultiLine -->
+                        android:hint="@string/new_rooms"
+                        android:inputType="numberDecimal" /> <!-- Используйте text|textMultiLine -->
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -215,6 +259,8 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#5A0721"
+                    app:boxStrokeErrorColor="#8E233C"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -224,8 +270,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:layout_marginStart="5dp"
-                        android:hint="   Ваш город:*"
-                        android:inputType="text|textCapWords" />
+                        android:hint="@string/new_city"
+                        android:inputType="text|textCapWords"
+                        android:textAlignment="center" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -236,6 +283,7 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     app:boxBackgroundMode="outline"
+                    app:boxStrokeColor="#12683C"
                     app:hintTextAppearance="@style/TextInputLayoutHintStyle"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -246,8 +294,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
                         android:ems="10"
-                        android:hint="Цена, AZN*"
+                        android:hint="@string/new_price"
                         android:inputType="number"
+                        android:textAlignment="center"
                         android:textColorHint="#011E85" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -273,6 +322,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
+                    app:boxStrokeColor="#FF5722"
                     app:hintTextAppearance="@style/TextInputLayoutHintStyle"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -281,8 +331,8 @@
                     <EditText
                         android:id="@+id/editDesc"
                         android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:hint="Укажите Описание*" />
+                        android:layout_height="match_parent"
+                        android:hint="@string/new_desc" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -308,6 +358,7 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     android:scrollbarStyle="outsideInset"
+                    app:boxStrokeColor="#001478"
                     app:endIconScaleType="center"
                     app:hintTextAppearance="@style/TextInputLayoutHintStyle"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -318,7 +369,7 @@
                         android:id="@+id/editName"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
-                        android:hint="Имя*"
+                        android:hint="@string/new_name"
                         android:inputType="text|textCapWords" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -330,6 +381,7 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     android:scrollbarStyle="outsideInset"
+                    app:boxStrokeColor="#001478"
                     app:endIconScaleType="center"
                     app:hintTextAppearance="@style/TextInputLayoutHintStyle"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -340,7 +392,7 @@
                         android:id="@+id/editGmail"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
-                        android:hint="Эл.почта*"
+                        android:hint="@string/new_gmail"
                         android:inputType="text|textCapWords" /> <!-- Используйте text|textMultiLine -->
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -352,6 +404,7 @@
                     android:layout_marginEnd="5dp"
                     android:layout_marginBottom="5dp"
                     android:scrollbarStyle="outsideInset"
+                    app:boxStrokeColor="#001478"
                     app:endIconScaleType="center"
                     app:hintTextAppearance="@style/TextInputLayoutHintStyle"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -362,25 +415,37 @@
                         android:id="@+id/editNumber"
                         android:layout_width="match_parent"
                         android:layout_height="70dp"
-                        android:hint="Номер*"
-                        android:inputType="number|textCapWords" /> <!-- Используйте text|textMultiLine -->
+                        android:hint="@string/new_number"
+                        android:inputType="phone" /> <!-- Используйте text|textMultiLine -->
 
                 </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/bToAddNewAds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="7dp"
-                android:layout_marginEnd="7dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/background"
-                android:text="Готово"
+                android:text="@string/new_ok"
                 android:textColor="@color/white"
-                app:backgroundTint="@color/signUpFrag" />
+                app:backgroundTint="@color/buttonColor" />
 
         </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
 </LinearLayout>
