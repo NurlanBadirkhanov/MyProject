@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Простой Склад</string>
+    <string name="inter_ad_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="settings">Настройки</string>
+    <string name="notes">Блокнот</string>
+    <string name="shop_list">Список покупок</string>
+    <string name="new_item">Новый список</string>
+    <string name="title_hint">Заголовок</string>
+    <string name="description_hint">Описание</string>
+    <string name="new_list">Новый список Продуктов</string>
+    <string name="list_name"> Название списка </string>
+    <string name="create_list">Создать список</string>
+    <string name="delete_alert">Удалить</string>
+    <string name="delete_item">Вы точно хотите удалить список?</string>
+    <string name="cancel">Отмена</string>
+    <string name="update">Обновить</string>
+    <string name="general">Основные</string>
+    <string name="chose_note_style">Поменять стиль блокнота</string>
+    <string name="chose_time_format">Поменять формат времени </string>
+    <string name="remove_ads">Убрать Рекламу</string>
+    <string name="remove_ads_summary">Убрать рекламу во всем приложении</string>
+    <string name="theme_settings">Настройки темы</string>
+    <string name="chose_theme">Поменять темы</string>
+    <string name="note_text_settings">Размер текстов</string>
+    <string name="title_text_size">Размер Заголовка</string>
+    <string name="content_text_size">Размер контекста</string>
+    <string name="produkt_name">Список Продуктов</string>
+    <string name="obo_mne">Обо мне</string>
+
+
+</resources>
