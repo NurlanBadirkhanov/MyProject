@@ -1,7 +1,10 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    kotlin("kapt")
+
 }
+
 
 android {
     namespace = "com.richmedia.ecofit"
@@ -39,6 +42,9 @@ android {
 }
 
 dependencies {
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation(libs.androidx.activity)
+    kapt("com.github.bumptech.glide:compiler:4.12.0")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
