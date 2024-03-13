@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- res/color/selector_bottom_nav_item_color.xml -->
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:color="#009688" android:state_checked="true" /> <!-- Зеленый цвет для выбранного элемента -->
-    <item android:color="@color/materialTeal" /> <!-- Серый цвет для невыбранных элементов -->
-
-</selector>
