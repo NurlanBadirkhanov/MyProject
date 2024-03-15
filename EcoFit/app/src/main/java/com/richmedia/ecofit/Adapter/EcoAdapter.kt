@@ -9,7 +9,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.richmedia.ecofit.R
 import com.richmedia.ecofit.databinding.ItemEcoBinding
 
-class EcoAdapter(val context: Context) : RecyclerView.Adapter<EcoAdapter.ViewHolder>() {
+class EcoAdapter(private val context: Context) : RecyclerView.Adapter<EcoAdapter.ViewHolder>() {
     class ViewHolder(val binding: ItemEcoBinding) : RecyclerView.ViewHolder(binding.root)
 
     private val list: MutableList<EcoData> = mutableListOf()
@@ -29,7 +29,8 @@ class EcoAdapter(val context: Context) : RecyclerView.Adapter<EcoAdapter.ViewHol
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        list[position].let {
+       val data = list[position]
+        data.let{
             Glide.with(holder.itemView.context)
                 .load(it.img) // it.img - это URL изображения
                 .placeholder(R.drawable.a) // placeholder - это ресурс-заглушка, отображаемая до загрузки изображения (необязательно)
@@ -38,6 +39,10 @@ class EcoAdapter(val context: Context) : RecyclerView.Adapter<EcoAdapter.ViewHol
                 .into(holder.binding.imageView)
 
             holder.binding.tvTitle.text = it.title
+
+            holder.binding.cs.setOnClickListener{
+                onItemClick?.invoke(data)
+            }
 
         }
     }

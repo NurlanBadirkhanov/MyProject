@@ -13,17 +13,27 @@
         android:theme="@style/Theme.EcoFit"
         tools:targetApi="31">
         <activity
-            android:name=".ScreenDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.EcoFit">
+            android:name=".Splash"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ScreenDetailActivity"
+            android:exported="false">
+
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false">
+
+            <!-- android:theme="@style/Theme.EcoFit"> -->
+
         </activity>
 
         <meta-data
