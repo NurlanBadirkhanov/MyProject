@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E1FFFFFF"
+    tools:context="com.richmedia.sekundomer.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background2"
+            android:backgroundTint="@color/white">
+
+            <com.triggertrap.seekarc.SeekArc
+                android:id="@+id/sa_time"
+                android:layout_width="370dp"
+                android:layout_height="350dp"
+                android:layout_centerInParent="true"
+                android:padding="50dp"
+                app:arcColor="@color/black"
+                app:arcWidth="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:progress="50"
+                app:progressWidth="10dp" />
+
+            <Button
+                android:id="@+id/btn_time"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="serif"
+                android:text="@string/start"
+                android:textColor="@color/black"
+                android:textSize="50sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/sa_time"
+                app:layout_constraintStart_toStartOf="@+id/sa_time"
+                app:layout_constraintTop_toTopOf="@+id/sa_time" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_lap_reset"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:layout_below="@id/_relative_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/background"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:fontFamily="monospace"
+        android:text="@string/lap"
+        android:textColor="@color/white"
+        app:cornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_relative_layout" />
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background1"
+        android:backgroundTint="#870018"
+        android:fontFamily="monospace"
+        android:text="@string/pause"
+        android:textColor="@color/white"
+        app:cornerRadius="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_relative_layout" />
+
+    <ListView
+        android:id="@+id/lv_lap_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPause"
+        tools:listitem="@layout/item_lap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
