@@ -46,6 +46,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun volley(searchQuery: String) {
+        // Проверка на пустой ввод
+        if (searchQuery.isBlank()) {
+            // Выводите сообщение об ошибке или предпринимайте другие действия по вашему усмотрению
+            return
+        }
+
         val API = "dict.1.1.20240314T055436Z.6397349c4fc0659f.c74cfd5b4d00a1e1e051f24af0c205d2ecbddcc4"
         val lang = "ru-ru"
         val encodedQuery = URLEncoder.encode(searchQuery, "UTF-8")
@@ -67,9 +73,9 @@ class MainActivity : AppCompatActivity() {
                 // Передача списка синонимов, если они есть
                 val synonymsList = definitionResponse.definitions[0].tr.flatMap { it.syn.orEmpty() }.map { it.text }
                 intent.putStringArrayListExtra("synonyms", ArrayList(synonymsList))
-
-                // Запуск следующей активити
+                Log.d("MyLog", response.toString())
                 startActivity(intent)
+
             },
             { error ->
                 // Обрабатываем ошибку
@@ -79,6 +85,8 @@ class MainActivity : AppCompatActivity() {
         val queue = Volley.newRequestQueue(this)
         queue.add(stringRequest)
     }
+
+
 
 
 

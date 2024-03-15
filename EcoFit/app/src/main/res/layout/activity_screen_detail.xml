@@ -8,17 +8,6 @@
     android:fitsSystemWindows="true"
     tools:context=".ScreenDetailActivity">
 
-    <com.google.android.material.appbar.CollapsingToolbarLayout
-        android:id="@+id/collapsing_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-        <!-- Здесь вы можете разместить фоновое изображение или другое содержимое -->
-
-    </com.google.android.material.appbar.CollapsingToolbarLayout>
-
     <!-- В тулбаре здесь вы можете добавить кнопку назад и другие элементы управления -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
