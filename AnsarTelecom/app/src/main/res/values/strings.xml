@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">AnsarTelecom</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info">Məlumat</string>
+    <string name="home">Əsas</string>
+    <string name="list">Kateqoriyalar</string>
+    <string name="hint_email">Введите ваш аккаунт</string>
+    <string name="sighn_in">Войти</string>
+
+    <string name="hint_pass">Пожалуйста введите Пароль</string>
+    <string name="katalog" tools:ignore="ExtraTranslation">Catalog</string>
+    <string name="Catalog">Каталог</string>
+    <string name="qutuları">telefon qutuları</string>
+</resources>

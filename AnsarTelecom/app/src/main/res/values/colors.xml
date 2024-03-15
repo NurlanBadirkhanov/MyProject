@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="myIconColorActiveHome">#FF0000
+    </color> <!-- Замените #FF0000 на ваш желаемый цвет -->
+
+    <color name="myIconColorActiveList">#00BCD4
+    </color> <!-- Замените #FF0000 на ваш желаемый цвет -->
+    <color name="myIconColorInactive">#808080</color> <!-- Замените #808080 на ваш желаемый цвет -->
+    <color name="teal_2002">#FF03DAC5</color>
+    <color name="teal_7002">#FF018786</color>
+    <color name="default_bottom_menu_text_color">#808080</color>
+    <color name="fragment1_toolbar_color">#8F636262</color>
+    <color name="fragment1_status_bar_color">#9CA69494</color>
+    <color name="instaFragment">#6504006B</color>
+    <color name="fragment2_toolbar_color">#470707</color>
+    <color name="fragment2_status_bar_color">#A80A17</color>
+    <color name="fragment3_toolbar_color">#044504</color>
+    <color name="fragment3_status_bar_color">#6F1B4C00</color>
+    <color name="yellow">#E9F826</color>
+    <color name="yellow_dark">#A0AC00</color>
+    <color name="_dark">#8D202021</color>
+    <color name="dialog_background">#283593</color>
+    <color name="dialog_text">#EEEEEE</color>
+    <color name="dialog_buttons_color">#C62828</color>
+    <color name="dialog_checkbox">#FFF</color>
+    <color name="dialog_checkbox_activated">#FF0000</color>
+    <color name="dialog_list_item">#FFF</color>
+    <color name="dialog_accent_button">#FFF</color>
+    <color name="dialog_button">#77FFFFFF</color>
+    <color name="dialogBackground">#F5F5F5</color>
+    <color name="dialogText">#000000</color>
+    <color name="dialogButtonPositive">#2196F3</color>
+    <color name="dialogButtonNegative">#FF0000</color>
+
+    <color name="signInFrag">#F9C03F</color>
+    <color name="signUpFrag">#142448</color>
+    <color name="textInputBoxColor">#2196F3</color> <!-- Яркий синий -->
+    <color name="textInputHintColor">#757575</color> <!-- Серый -->
+    <color name="search_text_color">#000000</color>
+
+
+</resources>

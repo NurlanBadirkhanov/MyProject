@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/list"
+        android:icon="@drawable/ic_category"
+        android:title="@string/list"
+        app:cnb_iconColor="@color/teal_700"/>
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home"
+        app:cnb_iconColor="@color/red"/>
+    <item
+        android:id="@+id/info"
+        android:icon="@drawable/baseline_info_24"
+        android:title="@string/info"
+        app:cnb_iconColor="#001165"/>
+
+
+</menu>

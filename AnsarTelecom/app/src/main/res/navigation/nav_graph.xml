@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/list"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_list_to_electronicListFragment"
+            app:destination="@id/electronicListFragment" />
+        <action
+            android:id="@+id/action_list_to_accessuarListFragment"
+            app:destination="@id/accessuarListFragment" />
+        <action
+            android:id="@+id/action_list_to_SIMListFragment2"
+            app:destination="@id/SIMListFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/home"
+        android:name="com.ilnodstudio.ansartelecom.screen.home.HomeFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/electronicListFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.ElectronicListFragment"
+        android:label="fragment_electronic_list"
+        tools:layout="@layout/fragment_electronic_list" >
+        <action
+            android:id="@+id/action_electronicListFragment_to_smartPhonFragment"
+            app:destination="@id/smartPhonFragment" />
+        <action
+            android:id="@+id/action_electronicListFragment_to_clockFragment"
+            app:destination="@id/clockFragment" />
+        <action
+            android:id="@+id/action_electronicListFragment_to_tabFragment"
+            app:destination="@id/tabFragment" />
+        <action
+            android:id="@+id/action_electronicListFragment_to_noutFragment"
+            app:destination="@id/noutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/smartPhonFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.SmartPhon.SmartPhonFragment"
+        android:label="fragment_smart_phon"
+        tools:layout="@layout/fragment_smart_phon" />
+    <fragment
+        android:id="@+id/clockFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.clock.ClockFragment"
+        android:label="ClockFragment" />
+    <fragment
+        android:id="@+id/powerBankFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.PowerBank.PowerBankFragment"
+        android:label="fragment_power_bank"
+        tools:layout="@layout/fragment_power_bank" />
+    <fragment
+        android:id="@+id/headphonesFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.headphones.HeadphonesFragment"
+        android:label="fragment_headphones"
+        tools:layout="@layout/fragment_headphones" />
+    <fragment
+        android:id="@+id/tabFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.Tab.TabFragment"
+        android:label="fragment_tab"
+        tools:layout="@layout/fragment_tab" />
+    <fragment
+        android:id="@+id/accessuarListFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.accessuar.AccessuarListFragment"
+        android:label="fragment_accessuar_list"
+        tools:layout="@layout/fragment_accessuar_list" >
+        <action
+            android:id="@+id/action_accessuarListFragment_to_powerBankFragment"
+            app:destination="@id/powerBankFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_headphonesFragment"
+            app:destination="@id/headphonesFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_usbFragment"
+            app:destination="@id/usbFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_adaptersFragment"
+            app:destination="@id/adaptersFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_glassFragment"
+            app:destination="@id/glassFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_flashFragment"
+            app:destination="@id/flashFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_caseFragment"
+            app:destination="@id/caseFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_usbFragment2"
+            app:destination="@id/usbFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_otherFragment"
+            app:destination="@id/otherFragment" />
+        <action
+            android:id="@+id/action_accessuarListFragment_to_vinilFragment"
+            app:destination="@id/vinilFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/caseFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.accessuar.Adapters.CaseFragment"
+        android:label="CaseFragment" />
+    <fragment
+        android:id="@+id/flashFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.accessuar.Adapters.FlashFragment"
+        android:label="FlashFragment" />
+    <fragment
+        android:id="@+id/glassFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.accessuar.Adapters.GlassFragment"
+        android:label="GlassFragment" />
+    <fragment
+        android:id="@+id/otherFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.accessuar.Adapters.OtherFragment"
+        android:label="OtherFragment" />
+    <fragment
+        android:id="@+id/adaptersFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.accessuar.Adapters.AdapterFragment"
+        android:label="AdaptersFragment" />
+    <fragment
+        android:id="@+id/usbFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.PowerBank.UsbFragment"
+        android:label="UsbFragment" />
+    <fragment
+        android:id="@+id/vinilFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.PowerBank.VinilFragment"
+        android:label="VinilFragment" />
+    <fragment
+        android:id="@+id/noutFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.elektronics.noutbuk.NoutFragment"
+        android:label="NoutFragment" />
+    <fragment
+        android:id="@+id/azercellFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.sim.AzercellFragment"
+        android:label="fragment_azercell"
+        tools:layout="@layout/fragment_azercell" />
+    <fragment
+        android:id="@+id/narFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.sim.NarFragment"
+        android:label="fragment_nar"
+        tools:layout="@layout/fragment_nar" />
+    <fragment
+        android:id="@+id/bakcellFragment"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.sim.BakcellFragment"
+        android:label="fragment_bakcell"
+        tools:layout="@layout/fragment_bakcell" />
+    <fragment
+        android:id="@+id/SIMListFragment2"
+        android:name="com.ilnodstudio.ansartelecom.screen.list.sim.SIMListFragment"
+        android:label="fragment_s_i_m"
+        tools:layout="@layout/fragment_s_i_m" >
+        <action
+            android:id="@+id/action_SIMListFragment2_to_bakcellFragment"
+            app:destination="@id/bakcellFragment" />
+        <action
+            android:id="@+id/action_SIMListFragment2_to_narFragment"
+            app:destination="@id/narFragment" />
+        <action
+            android:id="@+id/action_SIMListFragment2_to_azercellFragment"
+            app:destination="@id/azercellFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/info"
+        android:name="com.ilnodstudio.ansartelecom.screen.info.infoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+</navigation>
