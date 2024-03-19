@@ -90,11 +90,6 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-
-
-
-
-
     private fun showNotification(time: String) {
         val builder = NotificationCompat.Builder(this, "default")
             .setSmallIcon(R.drawable.ic_launcher_background)
