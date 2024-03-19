@@ -6,4 +6,6 @@
     </style>
 
     <style name="Theme.EasyCalc" parent="Base.Theme.EasyCalc" />
+
+
 </resources>

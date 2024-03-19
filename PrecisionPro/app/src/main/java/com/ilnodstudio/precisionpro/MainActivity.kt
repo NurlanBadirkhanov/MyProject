@@ -9,7 +9,7 @@ import org.mariuszgromada.math.mxparser.Expression
 import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityMainBinding.inflate(layoutInflater)

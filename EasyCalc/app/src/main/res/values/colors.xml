@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="operatorColor">#506C2D</color>
+    <color name="backgroundColor">#010101</color>
+    <color name="clearColor">#CA7266</color>
+    <color name="operandColor">#302F2E</color>
+    <color name="green">#009688</color>
+    <color name="io_background">#009688</color>
+
+
 </resources>
