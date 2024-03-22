@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+            <androidx.cardview.widget.CardView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:duplicateParentState="false"
+                android:elevation="0dp"
+                android:clickable="true"
+                android:id="@+id/noteCV"
+                android:transitionName="NoteCVT"
+                android:foreground="?selectableItemBackground"
+                app:cardElevation="5dp"
+                android:layout_marginBottom="8dp"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="0dp">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/titleTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/ubuntu"
+                        android:singleLine="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textSize="14sp"
+                            android:maxLines="6"
+                            android:singleLine="false"
+                            android:layout_marginBottom="10dp"
+                            android:ellipsize="end"
+                            android:id="@+id/textTV"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:fontFamily="@font/ubuntu_bold"/>
+
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+</RelativeLayout>
