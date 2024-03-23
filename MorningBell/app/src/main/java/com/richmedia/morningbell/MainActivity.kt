@@ -9,6 +9,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import com.richmedia.morningbell.databinding.ActivityMainBinding
 import java.util.Calendar
 
@@ -20,11 +23,16 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
-
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.dhf)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
         alarmManager = getSystemService(Context.ALARM_SERVICE) as AlarmManager
-
         binding.btnSavetime.setOnClickListener {
 
             val cal = Calendar.getInstance()
@@ -50,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             alarmManager.set(AlarmManager.RTC_WAKEUP, cal.timeInMillis, pi)
             Toast.makeText(
                 this,
-                "Alarm Is set at ${cal.get(Calendar.HOUR_OF_DAY)} : ${cal.get(Calendar.MINUTE)}",
+                "Будильник поставлен на  ${cal.get(Calendar.HOUR_OF_DAY)} : ${cal.get(Calendar.MINUTE)}",
                 Toast.LENGTH_SHORT
             ).show()
         }
